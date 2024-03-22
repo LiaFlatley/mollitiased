@@ -1,0 +1,70 @@
+{
+  "name": "mollitiased",
+  "description": "base repo for common stuff in my other js projects",
+  "version": "1.0.0",
+  "license": "mit",
+  "author": "LilianaToy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LiaFlatley/mollitiased.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LiaFlatley/mollitiased.git/issues"
+  },
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "libs/*"
+  ],
+  "keywords": [
+    "turbo",
+    "provident",
+    "tsconfig",
+    "atque",
+    "maxime",
+    "soluta",
+    "javascript"
+  ],
+  "config": {
+    "engine-strict": true
+  },
+  "engines": {
+    "node": ">=18.13.0"
+  },
+  "packageManager": "pnpm@7.26.3",
+  "devDependencies": {
+    "@alexaegis/coverage-tools": "*",
+    "@lcov-viewer/cli": "^1.3.0",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "@vitest/coverage-c8": "^0.28.4",
+    "depcheck": "^1.4.3",
+    "eslint": "^8.33.0",
+    "eslint-config-next": "^13.1.6",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-turbo": "^0.0.7",
+    "eslint-plugin-unicorn": "^45.0.2",
+    "husky": "^8.0.3",
+    "markdownlint-cli": "^0.33.0",
+    "npm-check-updates": "^16.6.3",
+    "prettier": "^2.8.3",
+    "remark-cli": "^11.0.0",
+    "remark-lint": "^9.1.1",
+    "remark-lint-list-item-indent": "3.1.1",
+    "remark-lint-maximum-line-length": "^3.1.2",
+    "remark-preset-lint-consistent": "^5.1.1",
+    "remark-preset-lint-recommended": "^6.1.2",
+    "standard-version": "^9.5.0",
+    "ts-node": "^10.9.1",
+    "turbo": "^1.7.3",
+    "typedoc": "^0.23.24",
+    "typescript": "^4.9.5",
+    "vitest": "^0.28.4"
+  },
+  "dependencies": {
+    "typedoc-plugin-missing-exports": "^1.0.0"
+  },
+  "homepage": "https://github.com/LiaFlatley/mollitiased.git"
+}

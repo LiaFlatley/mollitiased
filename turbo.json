@@ -1,0 +1,137 @@
+{
+	"$schema": "https://turborepo.org/schema.json",
+	"pipeline": {
+		"prebuild": {
+			"outputs": ["dist/**"],
+			"dependsOn": [],
+			"outputMode": "new-only"
+		},
+		"//#prebuild:workspace": {
+			"outputs": ["dist/**"],
+			"dependsOn": [],
+			"outputMode": "new-only"
+		},
+		"build": {
+			"env": ["BASE_HREF"],
+			"dependsOn": ["^prebuild", "^build"],
+			"outputs": ["dist/**"],
+			"outputMode": "new-only"
+		},
+		"//#build:workspace": {
+			"dependsOn": [],
+			"outputs": [],
+			"outputMode": "new-only"
+		},
+		"lint": {
+			"outputs": [],
+			"dependsOn": [
+				"lint:tsc",
+				"lint:es",
+				"lint:svelte",
+				"lint:style",
+				"lint:md",
+				"lint:remark",
+				"lint:format",
+				"lint:depcheck"
+			],
+			"outputMode": "new-only"
+		},
+		"//#lint:workspace": {
+			"dependsOn": [],
+			"outputs": [],
+			"outputMode": "new-only"
+		},
+		"lint:es": {
+			"inputs": [".?eslintrc.(json|js|cjs|mjs)"],
+			"outputs": [],
+			"dependsOn": [],
+			"outputMode": "new-only"
+		},
+		"//#lint:es:workspace": {
+			"dependsOn": [],
+			"outputs": [],
+			"outputMode": "new-only"
+		},
+		"lint:tsc": {
+			"outputs": [],
+			"dependsOn": [],
+			"outputMode": "new-only"
+		},
+		"lint:depcheck": {
+			"outputs": [],
+			"dependsOn": [],
+			"outputMode": "new-only"
+		},
+		"lint:svelte": {
+			"outputs": [],
+			"dependsOn": [],
+			"outputMode": "new-only"
+		},
+		"//#lint:svelte:workspace": {
+			"dependsOn": [],
+			"outputs": [],
+			"outputMode": "new-only"
+		},
+		"lint:style": {
+			"outputs": [],
+			"dependsOn": [],
+			"outputMode": "new-only"
+		},
+		"//#lint:style:workspace": {
+			"dependsOn": [],
+			"outputs": [],
+			"outputMode": "new-only"
+		},
+		"lint:md": {
+			"outputs": [],
+			"dependsOn": [],
+			"outputMode": "new-only"
+		},
+		"//#lint:md:workspace": {
+			"dependsOn": [],
+			"outputs": [],
+			"outputMode": "new-only"
+		},
+		"lint:remark": {
+			"env": [],
+			"outputs": [],
+			"dependsOn": [],
+			"outputMode": "new-only"
+		},
+		"//#lint:remark:workspace": {
+			"env": [],
+			"dependsOn": [],
+			"outputs": [],
+			"outputMode": "new-only"
+		},
+		"lint:format": {
+			"env": [],
+			"dependsOn": [],
+			"outputs": [],
+			"outputMode": "new-only"
+		},
+		"//#lint:format:workspace": {
+			"dependsOn": [],
+			"outputs": [],
+			"outputMode": "new-only"
+		},
+		"typedoc": {
+			"dependsOn": [],
+			"inputs": ["typedoc.json"],
+			"outputs": ["typedoc/**"],
+			"outputMode": "new-only"
+		},
+		"test": {
+			"env": ["VITEST"],
+			"dependsOn": ["^build"],
+			"outputs": ["coverage"],
+			"outputMode": "new-only"
+		},
+		"start": {
+			"cache": false
+		},
+		"dev": {
+			"cache": false
+		}
+	}
+}
